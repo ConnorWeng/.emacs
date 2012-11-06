@@ -1,5 +1,12 @@
 (provide 'styles)
 
+;;set default font
+(set-default-font "Consolas-10")
+
+;;Style for Connor.Weng
+(setq-default indent-tabs-mode nil) ;; M-x untabify to replace all tabs with spaces
+;; M-x whitespace-cleanup to remove all useless white spaces
+
 (defconst my-c-style
   '((c-basic-offset . 4)
     (c-tab-always-indent . t)
@@ -32,7 +39,7 @@
   ;; set my personal style for the current buffer
   (c-set-style "CW")
   ;; other customizations
-  (setq tab-width 2
+  (setq tab-width 4
         ;; this will make sure spaces are used instead of tabs
         indent-tabs-mode nil)
   ;; we don't like auto-newline, also not hungry-delete
@@ -55,4 +62,4 @@
              (c-set-style "cw")))
 
 ;;set js indent
-(setq js-indent-level 2)
+(setq js-indent-level 4)

@@ -16,13 +16,6 @@
 ;;see http://www.masteringemacs.org/articles/2011/10/02/improving-performance-emacs-display-engine/
 (setq redisplay-dont-pause t)
 
-;;Style for Connor.Weng
-(setq-default indent-tabs-mode nil) ;; M-x untabify to replace all tabs with spaces
-;; M-x whitespace-cleanup to remove all useless white spaces
-
-;;set default font
-(set-default-font "Consolas-10.5")
-
 ;;no '~' file
 (setq make-backup-files nil)
 
