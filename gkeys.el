@@ -19,5 +19,7 @@
 (global-set-key (kbd "C-.") 'tabbar-forward)
 
 (global-set-key [(control tab)] 'semantic-ia-complete-symbol-menu)
+(global-set-key "\C-xj" 'semantic-ia-fast-jump)
 
 (global-set-key (kbd "M-/") 'auto-complete)
+
