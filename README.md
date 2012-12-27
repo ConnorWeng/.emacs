@@ -5,12 +5,8 @@ Usage
 -------------
 
 Add content below to ~/.emacs    
-*(load-file "path-to-this-directory/.emacs")*
-
-Modify this .emacs file    
-*(add-to-list 'load-path "f:/Workspace/LISP/.emacs/")*    
-to    
-*(add-to-list 'load-path "path-to-this-directory")*  
+*(defconst emacs-config-path "PATH_TO_THIS_DIRECTORY/")*   
+*(load-file (concat emacs-config-path ".emacs"))*
 
 Dependencies
 -------------
