@@ -109,3 +109,8 @@
 (require 'auto-complete-config)
 (ac-config-default)
 (global-auto-complete-mode 1)
+
+;;markdown-mode
+(require 'markdown-mode)
+(setq auto-mode-alist
+      (cons '("\\.md" . markdown-mode) auto-mode-alist))

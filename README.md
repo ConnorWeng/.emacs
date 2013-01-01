@@ -24,6 +24,7 @@ Dependencies
 * nxhtml-master
 * tabbar
 * yasnippet
+* markdown-mode
 
 License
 -------
