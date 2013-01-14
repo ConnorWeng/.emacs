@@ -50,7 +50,7 @@ by using nxml's indentation rules."
 
 (defun presentation ()
   (interactive)
-  (set-frame-font "Monaco-14"))
+  (set-frame-font "Monaco-17"))
 
 (defun unpresentation ()
   (interactive)

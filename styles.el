@@ -1,7 +1,8 @@
 (provide 'styles)
 
 ;;set default font
-(set-default-font "Consolas-10")
+(set-frame-font "Monaco-11")
+(set-fontset-font "fontset-default" 'han '("PingFang SC" . "unicode-bmp"))
 
 ;;Style for Connor.Weng
 (setq-default indent-tabs-mode nil) ;; M-x untabify to replace all tabs with spaces

@@ -12,17 +12,6 @@
               (project-dir (parent-directory (file-name-directory full-file-name))))
          (print project-dir)
          (print (shell-command-to-string (concat "cd " project-dir " && npm test")))))
-     (defun coffee-command-compile (input &optional output)
-       "Modified by ConnorWeng in order to support change output dir."
-       (let* ((full-file-name (expand-file-name input))
-              (output-dir (concat (parent-directory (file-name-directory full-file-name)) "lib")))
-         (unless (file-directory-p output-dir)
-           (make-directory output-dir t))
-         (format "%s %s -o %s %s"
-                 (shell-quote-argument coffee-command)
-                 (coffee-command-compile-arg-as-string output)
-                 (shell-quote-argument output-dir)
-                 (shell-quote-argument full-file-name))))
      (define-key coffee-mode-map (kbd "C-c C-,") 'coffee-npm-test)))
 (custom-set-variables '(coffee-tab-width 2))
 
@@ -128,6 +117,7 @@
 ;;sqlplus-mode
 (require 'sqlplus)
 (add-to-list 'auto-mode-alist '("\\.sqp\\'" . sqlplus-mode))
+(setq sqlplus-command "/usr/local/bin/sqlplus")
 
 ;;plsql-mode
 (require 'plsql)
@@ -167,3 +157,7 @@
 
 (setq auto-save-buffers-enhanced-interval 4)
 (auto-save-buffers-enhanced t)
+
+(require 'evernote-mode)
+(setq evernote-enml-formatter-command '("w3m" "-dump" "-I" "UTF8" "-O" "UTF8"))
+(setq evernote-developer-token "S=s14:U=370862:E=156e0e4ef05:C=14f8933c2f8:P=1cd:A=en-devtoken:V=2:H=df199f70f0b0801f9643190467b7d456")
