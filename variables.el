@@ -1,7 +1,7 @@
 (provide 'variables)
 
 ;; set initial buffer
-(setq initial-buffer-choice "c:/Users/Connor/Desktop/todo.org")
+(setq initial-buffer-choice "c:/Users/kfzx-wengxj/Desktop/to-do.org")
 
 ;; always prefer UTF-8 to ISO-8859-1
 (prefer-coding-system 'utf-8)
@@ -18,6 +18,9 @@
 
 ;;no '~' file
 (setq make-backup-files nil)
+
+;;support chinese
+(set-language-environment "Chinese-GBK")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

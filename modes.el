@@ -19,10 +19,10 @@
          (unless (file-directory-p output-dir)
            (make-directory output-dir t))
          (format "%s %s -o %s %s"
-                 (shell-quote-argument coffee-command)
+                 coffee-command
                  (coffee-command-compile-arg-as-string output)
-                 (shell-quote-argument output-dir)
-                 (shell-quote-argument full-file-name))))
+                 output-dir
+                 full-file-name)))
      (define-key coffee-mode-map (kbd "C-c C-,") 'coffee-npm-test)))
 (custom-set-variables '(coffee-tab-width 2))
 
@@ -106,6 +106,9 @@
 ;;jdee
 (require 'jde)
 
+(setq cedet-version "1.0")
+(add-to-list 'auto-mode-alist '("\\.java$" . jde-mode))
+
 ;;enable hs-minor-mode
 (add-hook 'jde-mode-hook 'hs-minor-mode)
 
@@ -119,6 +122,8 @@
 
 ;;markdown-mode
 (require 'markdown-mode)
+(setq markdown-command "perl d:/Workspace/PERL/Markdown_1.0.1/Markdown.pl")
+(setq markdown-css-path "d:/Workspace/PERL/Markdown_1.0.1/Clearness.css")
 (setq auto-mode-alist
       (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
@@ -169,5 +174,9 @@
 
 (winner-mode 1)
 
-(setq auto-save-buffers-enhanced-interval 5)
+(setq auto-save-buffers-enhanced-interval 2)
 (auto-save-buffers-enhanced t)
+
+(require 'evernote-mode)
+(setq evernote-enml-formatter-command '("w3m" "-dump" "-I" "UTF8" "-O" "UTF8"))
+(setq evernote-developer-token "S=s14:U=370862:E=1549e6f3a49:C=14d46be0d90:P=1cd:A=en-devtoken:V=2:H=0112295ae9055440d895d4920ae1f332")

@@ -1,11 +1,14 @@
 (provide 'styles)
 
 ;;set default font
-(set-default-font "Consolas-10")
+(set-frame-font "Monaco-8")
+(set-fontset-font "fontset-default" 'han '("Microsoft YaHei" . "unicode-bmp"))
 
 ;;Style for Connor.Weng
 (setq-default indent-tabs-mode nil) ;; M-x untabify to replace all tabs with spaces
 ;; M-x whitespace-cleanup to remove all useless white spaces
+
+(setq-default tab-width 4)
 
 ;;load-theme
 (load-theme 'molokai t)
@@ -17,6 +20,10 @@
 ;;use google-c-style
 (require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
+
+(add-hook 'sql-mode-hook
+          '(lambda()
+             (set (make-local-variable 'indent-tabs-mode) nil)))
 
 (add-hook 'html-mode-hook
           (lambda ()
