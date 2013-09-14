@@ -36,6 +36,9 @@
 (add-hook 'javascript-mode-hook 'my-javascript-mode-fn)
 ;;(add-hook 'espresso-mode-hook 'my-javascript-mode-fn)
 
+(add-hook 'js-mode-hook
+          (lambda() (local-set-key "\M-." 'find-tag)))
+
 ;;enable auto revert mode
 (global-auto-revert-mode)
 (setq auto-revert-interval 30)
@@ -114,3 +117,6 @@
 (require 'markdown-mode)
 (setq auto-mode-alist
       (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
+;;auto cleanup whitespace
+(add-hook 'before-save-hook '(lambda() (whitespace-cleanup)))
