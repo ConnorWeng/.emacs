@@ -120,3 +120,7 @@
 
 ;;auto cleanup whitespace
 (add-hook 'before-save-hook '(lambda() (whitespace-cleanup)))
+
+;;move lines
+(require 'move-lines)
+(move-lines-binding)
