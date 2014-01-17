@@ -146,3 +146,6 @@
 ;;helm-mode
 (require 'helm-config)
 (helm-mode 1)
+
+;;auto pair
+(electric-pair-mode 1)
