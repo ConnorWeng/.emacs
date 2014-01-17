@@ -142,3 +142,7 @@
                 ("\\.PRC\\'" . plsql-mode) ("\\.FNC\\'" . plsql-mode)
                 ("\\.TRG\\'" . plsql-mode) ("\\.VW\\'" . plsql-mode))
               auto-mode-alist ))
+
+;;helm-mode
+(require 'helm-config)
+(helm-mode 1)

@@ -4,8 +4,8 @@ Connor.Weng's emacs init file
 Usage
 -------------
 
-Add content below to ~/.emacs    
-*(defconst emacs-config-path "PATH_TO_THIS_DIRECTORY/")*   
+Add content below to ~/.emacs
+*(defconst emacs-config-path "PATH_TO_THIS_DIRECTORY/")*
 *(load-file (concat emacs-config-path ".emacs"))*
 
 Dependencies
@@ -25,6 +25,7 @@ Dependencies
 * tabbar
 * yasnippet
 * markdown-mode
+* helm-mode
 
 License
 -------
