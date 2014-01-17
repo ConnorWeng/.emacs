@@ -35,3 +35,11 @@ by using nxml's indentation rules."
       (backward-char) (insert "\n"))
     (indent-region begin end))
   (message "Ah, much better!"))
+
+(defun org-archive-done-tasks ()
+  "Move all done tasks to a archive file."
+  (interactive)
+  (org-map-entries '(lambda()
+                      (org-archive-subtree)
+                      (kill-line))
+                   "/DONE" 'file))
