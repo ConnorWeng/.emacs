@@ -19,9 +19,6 @@
 ;;no '~' file
 (setq make-backup-files nil)
 
-;;set default workspace
-(setq default-directory "F:/Workspace/")
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
