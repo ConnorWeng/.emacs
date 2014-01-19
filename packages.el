@@ -7,7 +7,8 @@
 
 (defvar my-packages '(clojure-mode
                       clojure-test-mode
-                      cider))
+                      cider
+                      js2-mode))
 
 (package-refresh-contents)
 
