@@ -6,9 +6,9 @@
 (add-to-list 'load-path (concat emacs-config-path "third_party/"))
 
 ;; order matters
+(require 'packages)
 (require 'variables)
 (require 'modes)
 (require 'styles)
 (require 'functions)
 (require 'gkeys)
-(require 'packages)

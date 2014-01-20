@@ -149,3 +149,8 @@
 
 ;;auto pair
 (electric-pair-mode 1)
+
+;;mmm-mode
+(require 'mmm-auto)
+(setq mmm-global-mode 'maybe)
+(mmm-add-mode-ext-class 'html-mode "\\.html\\'" 'html-js)
