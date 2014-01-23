@@ -12,7 +12,8 @@
                       cider
                       js2-mode
                       mmm-mode
-                      highlight-indentation))
+                      highlight-indentation
+                      auto-complete))
 
 (package-refresh-contents)
 
