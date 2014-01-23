@@ -11,7 +11,8 @@
                       clojure-test-mode
                       cider
                       js2-mode
-                      mmm-mode))
+                      mmm-mode
+                      highlight-indentation))
 
 (package-refresh-contents)
 
