@@ -13,7 +13,8 @@
                       js2-mode
                       mmm-mode
                       highlight-indentation
-                      auto-complete))
+                      auto-complete
+                      sublimity))
 
 (package-refresh-contents)
 

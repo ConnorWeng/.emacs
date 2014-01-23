@@ -157,3 +157,9 @@
 (require 'mmm-auto)
 (setq mmm-global-mode 'maybe)
 (mmm-add-mode-ext-class 'html-mode "\\.html\\'" 'html-js)
+
+;;sublimity-mode
+(require 'sublimity)
+(require 'sublimity-scroll)
+(require 'sublimity-map)
+(sublimity-global-mode)
