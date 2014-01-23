@@ -14,7 +14,8 @@
                       mmm-mode
                       highlight-indentation
                       auto-complete
-                      sublimity))
+                      sublimity
+                      ssh))
 
 (package-refresh-contents)
 
