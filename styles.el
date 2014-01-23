@@ -7,10 +7,8 @@
 (setq-default indent-tabs-mode nil) ;; M-x untabify to replace all tabs with spaces
 ;; M-x whitespace-cleanup to remove all useless white spaces
 
-;;color-theme
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-tomorrow-night)
+;;load-theme
+(load-theme 'molokai t)
 
 ;;set js indent
 (setq js-indent-level 4)
