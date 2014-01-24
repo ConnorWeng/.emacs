@@ -97,6 +97,10 @@
 (require 'cedet)
 (global-ede-mode 1) ;Enable the Project management system
 (semantic-load-enable-code-helpers) ;Enable prototype help and smart completion
+;;Disable semantic parser in html-mode because of conflict with mmm-mode
+(add-to-list 'semantic-inhibit-functions
+             (lambda ()
+               (if (eq major-mode 'html-mode) t)))
 
 ;;ecb
 (require 'ecb)
