@@ -76,7 +76,8 @@
 (defun my-php-mode-hook()
                                         ;(setq c-basic-offset 2)
                                         ;(c-set-offset 'defun-block-intro '+)
-  (local-set-key (kbd "RET") 'newline-and-indent))
+  (local-set-key (kbd "RET") 'newline-and-indent)
+  (local-set-key (kbd "C-.") 'tabbar-forward))
 (add-hook 'php-mode-hook 'my-php-mode-hook)
 
 
