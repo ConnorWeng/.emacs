@@ -15,7 +15,8 @@
                       highlight-indentation
                       auto-complete
                       sublimity
-                      ssh))
+                      ssh
+                      powerline))
 
 (package-refresh-contents)
 

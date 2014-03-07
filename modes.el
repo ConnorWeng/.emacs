@@ -15,6 +15,7 @@
 
 ;; yasnippet minor-mode
 (require 'yasnippet)
+(setq yas/snippet-dirs (cons (concat emacs-config-path "snippets/") yas/snippet-dirs))
 (yas/global-mode 1)
 
 ;;magit-mode
@@ -164,7 +165,7 @@
 (mmm-add-mode-ext-class 'html-mode "\\.html\\'" 'html-js)
 
 ;;sublimity-mode
-(require 'sublimity)
-(require 'sublimity-scroll)
-(require 'sublimity-map)
-(sublimity-global-mode)
+;(require 'sublimity)
+;(require 'sublimity-scroll)
+;(require 'sublimity-map)
+;(sublimity-global-mode)
