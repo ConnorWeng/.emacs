@@ -3,13 +3,10 @@
 ;; nxhtml-mode
 (require 'nxhtml-mode)
 
-;; CoffeeScript-mode
-(require 'coffee-mode)
+;; coffee-mode
 (defun coffee-custom ()
   "coffee-mode-hook"
-  (set (make-local-variable 'tab-width) 4)
-  (set (make-local-variable 'coffee-tab-width) 4)
-  (local-set-key (kbd "C-j") 'coffee-newline-and-indent))
+  (set (make-local-variable 'coffee-tab-width) 4))
 (add-hook 'coffee-mode-hook
           '(lambda() (coffee-custom)))
 
@@ -21,7 +18,6 @@
 ;;magit-mode
 (eval-after-load "vc" '(remove-hook 'find-file-hooks 'vc-find-file-hook)) ;remove vc-git
 (require 'magit)
-
 
 ;;C# mode
 (require 'csharp-mode)

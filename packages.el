@@ -16,7 +16,8 @@
                       auto-complete
                       sublimity
                       ssh
-                      powerline))
+                      powerline
+                      coffee-mode))
 
 (package-refresh-contents)
 
