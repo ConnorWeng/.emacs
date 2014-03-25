@@ -4,11 +4,29 @@
 (require 'nxhtml-mode)
 
 ;; coffee-mode
-(defun coffee-custom ()
-  "coffee-mode-hook"
-  (set (make-local-variable 'coffee-tab-width) 4))
+(eval-after-load "coffee-mode"
+  '(progn
+     (defun coffee-npm-test ()
+       (interactive)
+       (let* ((full-file-name (expand-file-name buffer-file-name))
+              (project-dir (parent-directory (file-name-directory full-file-name))))
+         (print project-dir)
+         (print (shell-command-to-string (concat "cd " project-dir " && npm test")))))
+     (defun coffee-command-compile (input &optional output)
+       "Modified by ConnorWeng in order to support change output dir."
+       (let* ((full-file-name (expand-file-name input))
+              (output-dir (concat (parent-directory (file-name-directory full-file-name)) "lib")))
+         (unless (file-directory-p output-dir)
+           (make-directory output-dir t))
+         (format "%s %s -o %s %s"
+                 (shell-quote-argument coffee-command)
+                 (coffee-command-compile-arg-as-string output)
+                 (shell-quote-argument output-dir)
+                 (shell-quote-argument full-file-name))))
+     (define-key coffee-mode-map (kbd "C-c C-,") 'coffee-npm-test)))
+(custom-set-variables '(coffee-tab-width 2))
 (add-hook 'coffee-mode-hook
-          '(lambda() (coffee-custom)))
+          '(lambda() (coffee-cos-mode t)))
 
 ;; yasnippet minor-mode
 (require 'yasnippet)

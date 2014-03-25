@@ -43,3 +43,7 @@ by using nxml's indentation rules."
                       (org-archive-subtree)
                       (kill-line))
                    "/DONE" 'file))
+
+(defun parent-directory (dir)
+  (unless (equal "/" dir)
+    (file-name-directory (directory-file-name dir))))
