@@ -165,3 +165,5 @@
 ;(require 'sublimity-scroll)
 ;(require 'sublimity-map)
 ;(sublimity-global-mode)
+
+(powerline-default-theme)
