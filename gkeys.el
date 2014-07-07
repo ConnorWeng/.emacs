@@ -26,3 +26,5 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (global-set-key (kbd "M-g s t") 'magit-status)
+(add-hook 'magit-log-mode-hook
+          (lambda () (local-set-key (kbd "X") 'magit-reset-head-hard)))
