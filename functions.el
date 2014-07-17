@@ -47,3 +47,11 @@ by using nxml's indentation rules."
 (defun parent-directory (dir)
   (unless (equal "/" dir)
     (file-name-directory (directory-file-name dir))))
+
+(defun presentation ()
+  (interactive)
+  (set-frame-font "Monaco-14"))
+
+(defun unpresentation ()
+  (interactive)
+  (set-frame-font "Monaco-8"))
