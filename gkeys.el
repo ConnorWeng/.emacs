@@ -28,3 +28,11 @@
 (global-set-key (kbd "M-g s t") 'magit-status)
 (add-hook 'magit-log-mode-hook
           (lambda () (local-set-key (kbd "X") 'magit-reset-head-hard)))
+
+;; For Linux
+(global-set-key (kbd "<C-mouse-4>") 'text-scale-increase)
+(global-set-key (kbd "<C-mouse-5>") 'text-scale-decrease)
+
+;; For Windows
+(global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
+(global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)
