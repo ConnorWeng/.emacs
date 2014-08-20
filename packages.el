@@ -17,7 +17,8 @@
                       sublimity
                       ssh
                       powerline
-                      coffee-mode))
+                      coffee-mode
+                      yasnippet))
 
 (package-refresh-contents)
 
