@@ -54,6 +54,9 @@
 (add-hook 'js-mode-hook
           (lambda() (local-set-key "\M-." 'find-tag)))
 
+;;use js2-mode instead of javascript-mode
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
 ;;enable auto revert mode
 (global-auto-revert-mode)
 (setq auto-revert-interval 30)
