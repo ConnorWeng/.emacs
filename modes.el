@@ -188,3 +188,5 @@
 ;(sublimity-global-mode)
 
 (powerline-default-theme)
+
+(winner-mode 1)
