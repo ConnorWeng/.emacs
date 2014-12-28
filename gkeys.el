@@ -29,6 +29,8 @@
 (add-hook 'magit-log-mode-hook
           (lambda () (local-set-key (kbd "X") 'magit-reset-head-hard)))
 
+(global-set-key (kbd "C-x f") 'find-file-in-repository)
+
 ;; For Linux
 (global-set-key (kbd "<C-mouse-4>") 'text-scale-increase)
 (global-set-key (kbd "<C-mouse-5>") 'text-scale-decrease)

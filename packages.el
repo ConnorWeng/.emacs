@@ -18,6 +18,7 @@
                       ssh
                       powerline
                       coffee-mode
+                      find-file-in-repository
                       yasnippet))
 
 (package-refresh-contents)
