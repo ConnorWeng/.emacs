@@ -25,8 +25,6 @@
                  (shell-quote-argument full-file-name))))
      (define-key coffee-mode-map (kbd "C-c C-,") 'coffee-npm-test)))
 (custom-set-variables '(coffee-tab-width 2))
-(add-hook 'coffee-mode-hook
-          '(lambda() (coffee-cos-mode t)))
 
 ;; yasnippet minor-mode
 (require 'yasnippet)
