@@ -24,7 +24,6 @@ Dependencies
 * jslint
 * magit
 * nxhtml-master
-* tabbar
 * yasnippet
 * markdown-mode
 * helm-mode

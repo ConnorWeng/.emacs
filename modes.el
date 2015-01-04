@@ -66,11 +66,6 @@
 (add-hook 'org-mode-hook
           (lambda() (setq truncate-lines nil)))
 
-
-;;tabbar-mode
-(require 'tabbar)
-(tabbar-mode)
-
 ;;show-paren-mode
 (show-paren-mode)
 
@@ -92,8 +87,7 @@
 (defun my-php-mode-hook()
                                         ;(setq c-basic-offset 2)
                                         ;(c-set-offset 'defun-block-intro '+)
-  (local-set-key (kbd "RET") 'newline-and-indent)
-  (local-set-key (kbd "C-.") 'tabbar-forward))
+  (local-set-key (kbd "RET") 'newline-and-indent))
 (add-hook 'php-mode-hook 'my-php-mode-hook)
 
 

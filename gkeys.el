@@ -15,9 +15,6 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 (global-set-key "\C-ce" '(lambda () (interactive) (org-export-as-html nil nil nil nil t nil)))
 
-(global-set-key (kbd "C-,") 'tabbar-backward)
-(global-set-key (kbd "C-.") 'tabbar-forward)
-
 (global-set-key [(control tab)] 'semantic-ia-complete-symbol-menu)
 (global-set-key "\C-xj" 'semantic-ia-fast-jump)
 
