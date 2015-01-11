@@ -21,8 +21,6 @@
                       find-file-in-repository
                       yasnippet))
 
-(package-refresh-contents)
-
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
