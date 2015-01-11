@@ -26,6 +26,11 @@
      (define-key coffee-mode-map (kbd "C-c C-,") 'coffee-npm-test)))
 (custom-set-variables '(coffee-tab-width 2))
 
+;; php-mode
+(add-hook 'php-mode-hook (lambda ()
+                           (local-set-key (kbd "C-.") 'imenu)
+                           (local-set-key (kbd "C-x j") 'php-show-arglist)))
+
 ;; yasnippet minor-mode
 (require 'yasnippet)
 (setq yas/snippet-dirs (cons (concat emacs-config-path "snippets/") yas/snippet-dirs))
