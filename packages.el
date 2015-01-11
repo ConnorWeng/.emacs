@@ -19,6 +19,7 @@
                       powerline
                       coffee-mode
                       find-file-in-repository
+                      php-mode
                       yasnippet))
 
 (dolist (p my-packages)

@@ -69,28 +69,6 @@
 ;;show-paren-mode
 (show-paren-mode)
 
-;;Set php-mode
-(autoload 'php-mode "php-mode" "Major mode for editing php code." t)
-(defun clean-php-mode ()
-  (interactive)
-  (php-mode)
-  (setq c-basic-offset 2) ; 2 tabs indenting
-  (setq indent-tabs-mode nil)
-  (setq fill-column 78)
-  (c-set-offset 'case-label '+)
-  (c-set-offset 'arglist-close 'c-lineup-arglist-operators))
-(c-set-offset 'arglist-intro '+) ; for FAPI arrays and DBTNG
-(c-set-offset 'arglist-cont-nonempty 'c-lineup-math) ; for DBTNG fields and values
-(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
-(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
-
-(defun my-php-mode-hook()
-                                        ;(setq c-basic-offset 2)
-                                        ;(c-set-offset 'defun-block-intro '+)
-  (local-set-key (kbd "RET") 'newline-and-indent))
-(add-hook 'php-mode-hook 'my-php-mode-hook)
-
-
 ;;linum-mode
 ;;(linum-mode)
 ;;(global-linum-mode)
