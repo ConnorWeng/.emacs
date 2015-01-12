@@ -27,9 +27,11 @@
 (custom-set-variables '(coffee-tab-width 2))
 
 ;; php-mode
+(require 'php-auto-yasnippets)
 (add-hook 'php-mode-hook (lambda ()
                            (local-set-key (kbd "C-.") 'imenu)
-                           (local-set-key (kbd "C-x j") 'php-show-arglist)))
+                           (local-set-key (kbd "C-x j") 'php-show-arglist)
+                           (payas/ac-setup)))
 
 ;; yasnippet minor-mode
 (require 'yasnippet)
