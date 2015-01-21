@@ -37,3 +37,5 @@
 (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)
 
 (global-set-key (kbd "C-.") 'imenu)
+
+(global-set-key (kbd "C-x p") '(lambda () (interactive) (other-window -1)))
