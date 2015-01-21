@@ -11,7 +11,8 @@
 (load-theme 'molokai t)
 
 ;;set js indent
-(setq js-indent-level 4)
+(setq js-indent-level 2)
+(setq js2-basic-offset 2)
 
 ;;use google-c-style
 (require 'google-c-style)
