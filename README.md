@@ -14,9 +14,9 @@ Download [molokai-theme](https://raw2.github.com/alloy-d/color-theme-molokai/mas
 Dependencies
 -------------
 
-* auto-complete
+Packages below need to be downloaded manually. Some other packages will be downloaded automatically via emacs's buildin package system.
+
 * cedet-1.1
-* coffee-mode
 * csharp-mode.el
 * ecb-2.40
 * elib-1.0
@@ -24,9 +24,9 @@ Dependencies
 * jslint
 * magit
 * nxhtml-master
-* yasnippet
 * markdown-mode
 * helm-mode
+* php-auto-yasnippets
 
 License
 -------
