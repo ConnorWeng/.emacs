@@ -168,3 +168,6 @@
 (powerline-default-theme)
 
 (winner-mode 1)
+
+(auto-save-buffers-enhanced t)
+(setq auto-save-buffers-enhanced-interval 5)

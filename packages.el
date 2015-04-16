@@ -20,7 +20,8 @@
                       coffee-mode
                       find-file-in-repository
                       php-mode
-                      yasnippet))
+                      yasnippet
+                      auto-save-buffers-enhanced))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
