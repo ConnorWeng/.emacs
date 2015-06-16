@@ -21,7 +21,9 @@
                       find-file-in-repository
                       php-mode
                       yasnippet
-                      auto-save-buffers-enhanced))
+                      auto-save-buffers-enhanced
+                      helm
+                      helm-ag))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
