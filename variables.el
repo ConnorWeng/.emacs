@@ -4,7 +4,7 @@
 (setq initial-buffer-choice "c:/Users/Connor/Desktop/todo.org")
 
 ;; always prefer UTF-8 to ISO-8859-1
-(prefer-coding-system 'utf-8)
+(prefer-coding-system 'utf-8-unix)
 
 ;; try to fix the problem of emacs hanging up every few minutes
 ;; see http://stackoverflow.com/questions/2007329/emacs-23-1-50-1-hangs-ramdomly-for-6-8-seconds-on-windows-xp
