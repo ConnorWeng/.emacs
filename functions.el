@@ -99,3 +99,21 @@ Replaces default behaviour of comment-dwim, when it inserts comment at the end o
   ;; (line-beginning-position (+ 1 arg)))
   (message "%d line%s copied" arg (if (= 1 arg) "" "s")))
 (global-set-key (kbd "M-k") 'qiang-copy-line)
+
+(defun set-tab-width (use-tab)
+  (setq-default indent-tabs-mode use-tab)
+  (let ((width (read-minibuffer "tab-width: ")))
+	(setq-default tab-width width)
+	(setq-default c-basic-offset width)
+	(setq-default js-indent-level width)
+	(setq-default js2-basic-offset width)))
+
+(defun tab-mode ()
+  (interactive)
+  (remove-hook 'before-save-hook '(lambda() (whitespace-cleanup)))
+  (set-tab-width t))
+
+(defun space-mode ()
+  (interactive)
+  (add-hook 'before-save-hook '(lambda() (whitespace-cleanup)))
+  (set-tab-width nil))
