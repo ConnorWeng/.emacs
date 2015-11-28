@@ -99,10 +99,6 @@
              (lambda ()
                (if (eq major-mode 'html-mode) t)))
 
-;;ecb
-(require 'ecb)
-(setq ecb-tip-of-the-day nil)
-
 ;;jdee
 (require 'jde)
 
