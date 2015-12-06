@@ -23,7 +23,8 @@
                       yasnippet
                       auto-save-buffers-enhanced
                       helm
-                      helm-ag))
+                      helm-ag
+                      emmet-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
