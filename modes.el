@@ -165,5 +165,5 @@
 
 (winner-mode 1)
 
-(setq auto-save-buffers-enhanced-interval 5)
+(setq auto-save-buffers-enhanced-interval 4)
 (auto-save-buffers-enhanced t)
