@@ -24,7 +24,9 @@
                       auto-save-buffers-enhanced
                       helm
                       helm-ag
-                      emmet-mode))
+                      emmet-mode
+                      json-reformat
+                      sbt-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
