@@ -155,6 +155,11 @@
 (setq mmm-global-mode 'maybe)
 (mmm-add-mode-ext-class 'html-mode "\\.html\\'" 'html-js)
 
+;;emmet-mode
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'html-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook  'emmet-mode)
+
 ;;sublimity-mode
 ;(require 'sublimity)
 ;(require 'sublimity-scroll)
