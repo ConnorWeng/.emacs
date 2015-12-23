@@ -11,7 +11,6 @@
                       clojure-test-mode
                       cider
                       js2-mode
-                      mmm-mode
                       highlight-indentation
                       auto-complete
                       sublimity
