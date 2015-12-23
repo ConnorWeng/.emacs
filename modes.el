@@ -162,6 +162,9 @@
 (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
 
 ;;emmet-mode
+(require 'emmet-mode) ;cannot modify the keymap without requiring the mode first
+(define-key emmet-mode-keymap (kbd "<tab>") 'emmet-expand-line)
+(define-key emmet-mode-keymap (kbd "C-j") 'newline-and-indent)
 (add-hook 'web-mode-hook 'emmet-mode)
 
 ;;sublimity-mode
