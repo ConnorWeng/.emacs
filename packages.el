@@ -26,7 +26,8 @@
                       helm-ag
                       emmet-mode
                       json-reformat
-                      sbt-mode))
+                      sbt-mode
+                      web-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
