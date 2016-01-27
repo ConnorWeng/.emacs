@@ -24,7 +24,6 @@ Packages below need to be downloaded manually. Some other packages will be downl
 * jslint
 * magit
 * nxhtml-master
-* markdown-mode
 * helm-mode
 * php-auto-yasnippets
 

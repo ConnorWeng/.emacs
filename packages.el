@@ -26,7 +26,8 @@
                       emmet-mode
                       json-reformat
                       sbt-mode
-                      web-mode))
+                      web-mode
+                      markdown-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
