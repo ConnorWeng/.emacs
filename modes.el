@@ -73,6 +73,7 @@
 ;;cedet
 (require 'cedet)
 (global-ede-mode 1) ;Enable the Project management system
+(semantic-mode 1)
 
 ;;enable hs-minor-mode
 (add-hook 'jde-mode-hook 'hs-minor-mode)
