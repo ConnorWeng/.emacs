@@ -39,3 +39,6 @@
 (global-set-key (kbd "C-.") 'imenu)
 
 (global-set-key (kbd "C-x p") '(lambda () (interactive) (other-window -1)))
+
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
