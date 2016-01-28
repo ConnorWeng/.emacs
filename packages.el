@@ -16,8 +16,6 @@
                       ssh
                       powerline
                       move-line
-                      sqlplus
-                      plsql
                       jdee
                       coffee-mode
                       find-file-in-repository
