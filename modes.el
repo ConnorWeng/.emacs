@@ -65,15 +65,7 @@
 ;;show-paren-mode
 (show-paren-mode)
 
-;;linum-mode
-;;(linum-mode)
-;;(global-linum-mode)
-;;(setq linum-format "%3d")
-
 ;;hide tool bar
-;;(tool-bar-mode nil)
-;;(menu-bar-mode nil)
-;;(scroll-bar-mode nil)
 (tool-bar-mode -1);;for emacs24
 (menu-bar-mode -1);;for emacs24
 (scroll-bar-mode -1);;for emacs24
@@ -147,12 +139,6 @@
 (define-key emmet-mode-keymap (kbd "<tab>") 'emmet-expand-line)
 (define-key emmet-mode-keymap (kbd "C-j") 'newline-and-indent)
 (add-hook 'web-mode-hook 'emmet-mode)
-
-;;sublimity-mode
-;(require 'sublimity)
-;(require 'sublimity-scroll)
-;(require 'sublimity-map)
-;(sublimity-global-mode)
 
 (powerline-default-theme)
 
