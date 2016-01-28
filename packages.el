@@ -7,22 +7,25 @@
              '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
-(defvar my-packages '(clojure-mode
-                      clojure-test-mode
-                      cider
-                      js2-mode
+(defvar my-packages '(js2-mode
+                      magit
                       highlight-indentation
                       auto-complete
-                      sublimity
+                      yasnippet
                       ssh
                       powerline
+                      move-line
+                      sqlplus
+                      plsql
+                      jdee
                       coffee-mode
                       find-file-in-repository
                       php-mode
-                      yasnippet
+                      php-auto-yasnippets
                       auto-save-buffers-enhanced
                       helm
                       helm-ag
+                      csharp-mode
                       emmet-mode
                       json-reformat
                       sbt-mode

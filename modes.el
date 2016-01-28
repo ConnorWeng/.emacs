@@ -1,8 +1,5 @@
 (provide 'modes)
 
-;; nxhtml-mode
-(require 'nxhtml-mode)
-
 ;; coffee-mode
 (eval-after-load "coffee-mode"
   '(progn
@@ -45,17 +42,6 @@
 ;;C# mode
 (require 'csharp-mode)
 
-;;enable jslint
-(require 'flymake-for-jslint-for-wsh "flymake-for-jslint-for-wsh.el")
-(setq flymake-for-jslint-jslint-location "~/jslint-for-wsh.js")
-(defun my-javascript-mode-fn ()
-  (flymake-mode 1)
-  )
-
-;; use whichever javavscript mode you prefer
-(add-hook 'javascript-mode-hook 'my-javascript-mode-fn)
-;;(add-hook 'espresso-mode-hook 'my-javascript-mode-fn)
-
 (add-hook 'js-mode-hook
           (lambda() (local-set-key "\M-." 'find-tag)))
 
@@ -69,10 +55,12 @@
 
 ;;org-mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-(org-indent-mode)
+
 ;;Make org-mode auto line wrap
 (add-hook 'org-mode-hook
-          (lambda() (setq truncate-lines nil)))
+          (lambda()
+            (org-indent-mode)
+            (setq truncate-lines nil)))
 
 ;;show-paren-mode
 (show-paren-mode)
@@ -93,14 +81,6 @@
 ;;cedet
 (require 'cedet)
 (global-ede-mode 1) ;Enable the Project management system
-(semantic-load-enable-code-helpers) ;Enable prototype help and smart completion
-;;Disable semantic parser in html-mode because of conflict with mmm-mode
-(add-to-list 'semantic-inhibit-functions
-             (lambda ()
-               (if (eq major-mode 'html-mode) t)))
-
-;;jdee
-(require 'jde)
 
 ;;enable hs-minor-mode
 (add-hook 'jde-mode-hook 'hs-minor-mode)

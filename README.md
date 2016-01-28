@@ -16,16 +16,7 @@ Dependencies
 
 Packages below need to be downloaded manually. Some other packages will be downloaded automatically via emacs's buildin package system.
 
-* cedet-1.1
-* csharp-mode.el
-* ecb-2.40
-* elib-1.0
-* jdee-2.4.0.1
-* jslint
-* magit
-* nxhtml-master
-* helm-mode
-* php-auto-yasnippets
+* move-lines
 
 License
 -------
