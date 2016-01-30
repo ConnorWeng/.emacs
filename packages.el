@@ -9,13 +9,11 @@
 
 (defvar my-packages '(js2-mode
                       magit
-                      evernote-mode
                       highlight-indentation
                       auto-complete
                       yasnippet
                       ssh
                       powerline
-                      move-line
                       jdee
                       coffee-mode
                       find-file-in-repository

@@ -16,7 +16,8 @@ Dependencies
 
 Packages below need to be downloaded manually. Some other packages will be downloaded automatically via emacs's buildin package system.
 
-* move-lines
+* [move-lines](https://github.com/targzeta/move-lines)
+* [evernote-mode](https://github.com/ConnorWeng/evernote-mode)
 
 License
 -------
