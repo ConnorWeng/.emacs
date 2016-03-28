@@ -42,3 +42,6 @@
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+(global-set-key (kbd "C-M-<mouse-1>") 'mc/add-cursor-on-click)
+(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
