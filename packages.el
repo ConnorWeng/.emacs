@@ -27,6 +27,8 @@
                       json-reformat
                       sbt-mode
                       web-mode
+                      multiple-cursors
+                      ace-jump-mode
                       markdown-mode))
 
 (dolist (p my-packages)
