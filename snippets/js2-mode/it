@@ -1,0 +1,6 @@
+# name: itshould
+# key: it
+# --
+it('should $1', ($2) => {
+ $>$0
+});
