@@ -29,7 +29,9 @@
                       web-mode
                       multiple-cursors
                       ace-jump-mode
-                      markdown-mode))
+                      markdown-mode
+                      flycheck
+                      ggtags))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

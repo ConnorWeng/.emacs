@@ -28,7 +28,8 @@
 (add-hook 'php-mode-hook (lambda ()
                            (local-set-key (kbd "C-.") 'imenu)
                            (local-set-key (kbd "C-x j") 'php-show-arglist)
-                           (payas/ac-setup)))
+                           (payas/ac-setup)
+                           (ggtags-mode 1)))
 
 ;; yasnippet minor-mode
 (require 'yasnippet)
@@ -129,3 +130,11 @@
 
 (setq auto-save-buffers-enhanced-interval 4)
 (auto-save-buffers-enhanced t)
+
+(electric-indent-mode 1)
+
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+(setq c-mode-hook
+      '(lambda ()
+        (ggtags-mode 1)))
