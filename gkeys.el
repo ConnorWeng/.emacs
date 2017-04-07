@@ -1,4 +1,8 @@
-(provide 'gkeys)
+;;; gkeys.el --- set keys
+
+;;; Commentary:
+
+;;; Code:
 
 (global-set-key "\C-w" 'backward-kill-word)
 (global-set-key "\C-x\C-k" 'kill-region)
@@ -45,3 +49,8 @@
 
 (global-set-key (kbd "C-M-<mouse-1>") 'mc/add-cursor-on-click)
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
+
+(global-set-key (kbd "C-j") 'newline-and-indent)
+
+(provide 'gkeys)
+;;; gkeys.el ends here

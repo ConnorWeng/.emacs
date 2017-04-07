@@ -1,4 +1,8 @@
-(provide 'styles)
+;;; styles.el --- config styles
+
+;;; Commentary:
+
+;;; Code:
 
 ;;set default font
 (set-default-font "Consolas-10")
@@ -22,3 +26,6 @@
           (lambda ()
             ;; Default indentation is usually 2 spaces, changing to 4.
             (set (make-local-variable 'sgml-basic-offset) 4)))
+
+(provide 'styles)
+;;; styles.el ends here

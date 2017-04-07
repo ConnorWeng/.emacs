@@ -1,4 +1,8 @@
-(provide 'packages)
+;;; packages.el --- install packages
+
+;;; Commentary:
+
+;;; Code:
 
 (require 'package)
 (add-to-list 'package-archives
@@ -36,3 +40,6 @@
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+(provide 'packages)
+;;; packages.el ends here

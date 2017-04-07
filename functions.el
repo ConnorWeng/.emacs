@@ -1,4 +1,8 @@
-(provide 'functions)
+;;; functions.el --- define functions
+
+;;; Commentary:
+
+;;; Code:
 
 ;; google
 (defun google ()
@@ -103,10 +107,10 @@ Replaces default behaviour of comment-dwim, when it inserts comment at the end o
 (defun set-tab-width (use-tab)
   (setq-default indent-tabs-mode use-tab)
   (let ((width (read-minibuffer "tab-width: ")))
-	(setq-default tab-width width)
-	(setq-default c-basic-offset width)
-	(setq-default js-indent-level width)
-	(setq-default js2-basic-offset width)))
+        (setq-default tab-width width)
+        (setq-default c-basic-offset width)
+        (setq-default js-indent-level width)
+        (setq-default js2-basic-offset width)))
 
 (defun tab-mode ()
   (interactive)
@@ -117,3 +121,6 @@ Replaces default behaviour of comment-dwim, when it inserts comment at the end o
   (interactive)
   (add-hook 'before-save-hook '(lambda() (whitespace-cleanup)))
   (set-tab-width nil))
+
+(provide 'functions)
+;;; functions.el ends here

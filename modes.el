@@ -1,4 +1,8 @@
-(provide 'modes)
+;;; modes.el --- set up modes
+
+;;; Commentary:
+
+;;; Code:
 
 ;; coffee-mode
 (eval-after-load "coffee-mode"
@@ -83,7 +87,7 @@
 (require 'auto-complete-config)
 (ac-config-default)
 (defun auto-complete-mode-maybe ()
-  "No maybe for you. Only AC!"
+  "No maybe for you.  Only AC!"
   (unless (minibufferp (current-buffer))
     (auto-complete-mode 1)))
 
@@ -138,3 +142,6 @@
 (setq c-mode-hook
       '(lambda ()
         (ggtags-mode 1)))
+
+(provide 'modes)
+;;; modes.el ends here
