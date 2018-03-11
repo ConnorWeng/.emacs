@@ -52,5 +52,8 @@
 
 (global-set-key (kbd "C-j") 'newline-and-indent)
 
+;; use org-mode to implement GTD
+(define-key global-map "\C-cc" 'org-capture)
+
 (provide 'gkeys)
 ;;; gkeys.el ends here
