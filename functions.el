@@ -122,5 +122,10 @@ Replaces default behaviour of comment-dwim, when it inserts comment at the end o
   (add-hook 'before-save-hook '(lambda() (whitespace-cleanup)))
   (set-tab-width nil))
 
+(defun clean-mode ()
+  (interactive)
+  (remove-hook 'before-save-hook '(lambda() (whitespace-cleanup)))
+  (set-tab-width nil))
+
 (provide 'functions)
 ;;; functions.el ends here
