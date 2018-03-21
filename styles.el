@@ -18,6 +18,7 @@
 (setq js-indent-level 2)
 (setq js2-basic-offset 2)
 (setq js2-indent-switch-body 1)
+(setq web-mode-code-indent-offset 2)
 
 ;;use google-c-style
 (require 'google-c-style)
