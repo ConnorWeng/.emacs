@@ -4,9 +4,6 @@
 
 ;;; Code:
 
-;; set initial buffer
-(setq initial-buffer-choice "c:/Users/Connor/Desktop/todo.org")
-
 ;; always prefer UTF-8 to ISO-8859-1
 (prefer-coding-system 'utf-8-unix)
 
