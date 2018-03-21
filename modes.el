@@ -132,7 +132,7 @@
 
 (winner-mode 1)
 
-(setq auto-save-buffers-enhanced-interval 4)
+(setq auto-save-buffers-enhanced-interval 30)
 (auto-save-buffers-enhanced t)
 
 (electric-indent-mode 1)
