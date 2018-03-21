@@ -143,5 +143,7 @@
       '(lambda ()
         (ggtags-mode 1)))
 
+(desktop-save-mode 1)
+
 (provide 'modes)
 ;;; modes.el ends here
