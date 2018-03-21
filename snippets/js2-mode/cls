@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+#name : cls
+# --
+import React, {Component} from 'react';
+import {
+  StyleSheet,
+  View,
+  Text,
+} from 'react-native';
+
+class $1 extends Component {
+
+  render() {
+    return (
+      $>$0
+    );
+  }
+
+}
+
+const styles = StyleSheet.create({
+
+});
+
+export default $1;

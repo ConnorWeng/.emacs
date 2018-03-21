@@ -50,9 +50,9 @@
 (add-hook 'js-mode-hook
           (lambda() (local-set-key "\M-." 'find-tag)))
 
-;;use js2-mode instead of javascript-mode
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.json\\'" . js2-mode))
+;;use rjsx-mode instead of javascript-mode
+(add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . rjsx-mode))
 
 ;;enable auto revert mode
 (global-auto-revert-mode)

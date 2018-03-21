@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+#name : rdc
+# --
+const $1 = (state = {
+  $2
+}, action) => {
+  switch (action.type) {
+  case '$3':
+    return Object.assign({}, state, {
+      $>$0
+    });
+  default:
+    return state;
+  }
+};
+
+export default $1;

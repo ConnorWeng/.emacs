@@ -35,7 +35,8 @@
                       ace-jump-mode
                       markdown-mode
                       flycheck
-                      ggtags))
+                      ggtags
+                      rjsx-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

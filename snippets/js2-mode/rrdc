@@ -1,0 +1,23 @@
+# -*- mode: snippet -*-
+#name : rrdc
+# --
+import {buildReducer, REQUEST_INITIAL_STATE} from './builder';
+
+const defaultState = {
+  $1,
+};
+
+const defaultHandler = (state, action) => {
+  switch (action.type) {
+    case '$3':
+    return Object.assign({}, state, {
+      $>$0,
+    });
+  }
+};
+
+const requestState = {
+  $2,
+};
+
+export default buildReducer(defaultState, defaultHandler, requestState);
