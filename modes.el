@@ -53,6 +53,9 @@
 ;;use rjsx-mode instead of javascript-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 (add-to-list 'auto-mode-alist '("\\.json\\'" . rjsx-mode))
+(add-hook 'js2-mode-hook (lambda ()
+  (define-key rjsx-mode-map (kbd "M-.") nil)
+  (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
 
 ;;enable auto revert mode
 (global-auto-revert-mode)

@@ -36,7 +36,8 @@
                       markdown-mode
                       flycheck
                       ggtags
-                      rjsx-mode))
+                      rjsx-mode
+                      xref-js2))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
