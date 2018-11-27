@@ -18,7 +18,6 @@
                       yasnippet
                       ssh
                       powerline
-                      jdee
                       coffee-mode
                       find-file-in-repository
                       php-mode
@@ -37,7 +36,9 @@
                       flycheck
                       ggtags
                       rjsx-mode
-                      xref-js2))
+                      xref-js2
+                      geben
+                      deft))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
