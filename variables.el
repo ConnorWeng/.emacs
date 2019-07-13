@@ -29,6 +29,9 @@
 (setq org-capture-templates '(("t" "Todo [inbox]" entry
                                (file+headline "~/Workspace/gtd/inbox.org" "Tasks")
                                "* TODO %i%?")
+                              ("i" "Item [inbox]" entry
+                               (file+headline "~/Workspace/gtd/inbox.org" "Tasks")
+                               "* %i%?")
                               ("T" "Tickler" entry
                                (file+headline "~/Workspace/gtd/tickler.org" "Tickler")
                                "* %i%? \n %U")))

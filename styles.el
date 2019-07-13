@@ -5,7 +5,15 @@
 ;;; Code:
 
 ;;set default font
-(set-default-font "Consolas-10")
+;; (set-default-font "Consolas-10")
+;; Setting English Font
+(set-face-attribute
+  'default nil :font "Consolas 11")
+;; Chinese Font
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+                      charset
+                      (font-spec :family "Microsoft Yahei Light" :size 16)))
 
 ;;Style for Connor.Weng
 (setq-default indent-tabs-mode nil) ;; M-x untabify to replace all tabs with spaces

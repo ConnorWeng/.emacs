@@ -130,6 +130,18 @@
 (define-key emmet-mode-keymap (kbd "C-j") 'newline-and-indent)
 (add-hook 'web-mode-hook 'emmet-mode)
 
+;;deft
+(require 'deft)
+(setq deft-directory "~/Workspace/gtd/notes")
+(setq deft-extensions '("org"))
+(setq deft-default-extension "org")
+(setq deft-text-mode 'org-mode)
+(setq deft-use-filename-as-title t)
+(setq deft-use-filter-string-for-filename t)
+(setq deft-auto-save-interval 0)
+;;key to launch deft
+(global-set-key (kbd "C-c d") 'deft)
+
 (powerline-default-theme)
 
 (winner-mode 1)
