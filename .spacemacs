@@ -70,14 +70,13 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(find-file-in-repository
-                                      xref-js2)
+   dotspacemacs-additional-packages '(find-file-in-repository xref-js2)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(smartparens)
+   dotspacemacs-excluded-packages '(company-tern tern)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -499,9 +498,9 @@ before packages are loaded."
 
   (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
   (add-to-list 'auto-mode-alist '("\\.json\\'" . rjsx-mode))
-  ;; (with-eval-after-load 'rjsx-mode
-  ;;   (define-key rjsx-mode-map (kbd "M-.") nil)
-  ;;   (add-hook 'xref-backend-functions #'xref-js2-xref-backend))
+  (with-eval-after-load 'rjsx-mode
+    (define-key rjsx-mode-map (kbd "M-.") nil)
+    (add-hook 'xref-backend-functions #'xref-js2-xref-backend))
   (with-eval-after-load 'yas-minor-mode
     (define-key yas-keymap (kbd "<tab>") 'indent-for-tab-command))
   (setq-default
@@ -541,7 +540,36 @@ before packages are loaded."
                                  "* %i%? \n %U")))
   (setq org-refile-targets '(("~/Workspace/gtd/gtd.org" :maxlevel . 3)
                              ("~/Workspace/gtd/someday.org" :level . 1)
-                             ("~/Workspace/gtd/tickler.org" :maxlevel . 2))))
+                             ("~/Workspace/gtd/tickler.org" :maxlevel . 2)))
+
+  (defun my-org-screenshot ()
+    "Take a screenshot into a time stamped unique-named file in the
+   same directory as the org-buffer and insert a link to this file."
+    (interactive)
+    (sleep-for 3)
+    (setq filename
+          (concat
+           (buffer-name)
+           "_"
+           (format-time-string "%Y%m%d_%H%M%S")
+           ".png"))
+    (setq filepath
+          (encode-coding-string
+           (concat
+            (file-name-directory (buffer-file-name))
+            "images/"
+            filename
+            ) 'chinese-gbk))
+    (shell-command "snippingtool /clip")
+    (shell-command (concat "powershell -command \"Add-Type -AssemblyName System.Windows.Forms;if ($([System.Windows.Forms.Clipboard]::ContainsImage())) {$image = [System.Windows.Forms.Clipboard]::GetImage();[System.Drawing.Bitmap]$image.Save('" filepath "',[System.Drawing.Imaging.ImageFormat]::Png); Write-Output 'clipboard content saved as file'} else {Write-Output 'clipboard does not contain image data'}\""))
+    (insert (concat "[[file:" "./images/" filename "]]"))
+    (org-display-inline-images))
+
+  (setq mouse-wheel-scroll-amount '(2 ((shift) . 1))) ;; two lines at a time
+  (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+  (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -573,7 +601,7 @@ This function is called at the very end of Spacemacs initialization."
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
    (quote
-    (impatient-mode counsel-css add-node-modules-path sql-indent web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data find-file-in-repository smeargle orgit magit-gitflow magit-popup helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit transient git-commit with-editor helm-company helm-c-yasnippet fuzzy company-tern dash-functional tern company-statistics company auto-yasnippet ac-ispell auto-complete web-beautify powerline spinner org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download livid-mode skewer-mode simple-httpd json-snatcher js2-refactor yasnippet multiple-cursors js-doc htmlize parent-mode projectile pkg-info epl gnuplot flx highlight smartparens iedit anzu evil goto-chg deft bind-map bind-key packed helm helm-core popup undo-tree hydra async avy f s dash json-mode js2-mode coffee-mode ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+    (ansi package-build shut-up git commander xref-js2 sql-indent web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data find-file-in-repository smeargle orgit magit-gitflow magit-popup helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit transient git-commit with-editor helm-company helm-c-yasnippet fuzzy dash-functional tern company-statistics company auto-yasnippet ac-ispell auto-complete web-beautify powerline spinner org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download livid-mode skewer-mode simple-httpd json-snatcher js2-refactor yasnippet multiple-cursors js-doc htmlize parent-mode projectile pkg-info epl gnuplot flx highlight smartparens iedit anzu evil goto-chg deft bind-map bind-key packed helm helm-core popup undo-tree hydra async avy f s dash json-mode js2-mode coffee-mode ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
