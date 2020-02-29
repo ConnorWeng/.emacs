@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: impc
+# key: impc
+# --
+import React, { useEffect, useState } from 'react'
+
+export const $1 = () => {
+  return (
+    <div>$0</div>
+  )
+}
+
+const styles = {
+
+}

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: React style
+# key: sty
+# --
+style={styles.$0}

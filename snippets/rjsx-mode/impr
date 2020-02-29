@@ -1,0 +1,24 @@
+# -*- mode: snippet -*-
+# name: impr
+# key: impr
+# --
+import React, { useEffect, useState } from 'react'
+import { message } from 'antd'
+
+import MobileLayout from '@componentsMobile/layout'
+import { useFetchUser } from '@lib/user'
+
+export default () => {
+  const { user } = useFetchUser()
+  const [ loading, setLoading ] = useState(true)
+
+  return (
+    <MobileLayout user={user} footer={false} loading={loading}>
+      $0
+    </MobileLayout>
+  )
+}
+
+const styles = {
+
+}
