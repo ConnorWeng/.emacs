@@ -3,13 +3,10 @@
 # key: impc
 # --
 import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 
 export const $1 = () => {
   return (
     <div>$0</div>
   )
-}
-
-const styles = {
-
 }
