@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: request function
+# key: req
+# --
+const request$1 = async () => {
+  try {
+    setLoading(true)
+    const res = await $2()
+    if (res.success) {
+      set$0(res.result)
+    } else {
+      message.error('Oops! Request Server Failed!')
+    }
+  } finally {
+    setLoading(false)
+  }
+}

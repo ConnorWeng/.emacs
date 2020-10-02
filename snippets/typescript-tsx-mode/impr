@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name: impr
+# key: impr
+# --
+import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
+import { message } from 'antd'
+
+import MobileLayout from '@componentsMobile/layout'
+import { useFetchUser } from '@lib/user'
+
+export default function $1($2) {
+  const { user } = useFetchUser()
+  const [ loading, setLoading ] = useState(true)
+
+  return (
+    <MobileLayout user={user} footer={false} loading={loading} contentStyle={styles.contentStyle}>
+      $0
+    </MobileLayout>
+  )
+}
+
+$1.getInitialProps = ({ query }) => query
+
+const styles = {
+
+  contentStyle: {}
+
+}
